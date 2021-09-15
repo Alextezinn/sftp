@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from tempfile import mkstemp
 from time import time
 from paramiko.common import o777, o600, o666, o644
 import sys
@@ -257,4 +256,3 @@ class TestSFTP(object):
 
         self.sftp.put(Path("/home"), Path("/root/p.txt"))
         self.sftp.remove(Path("/root/p.txt"))
-
