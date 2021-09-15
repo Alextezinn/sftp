@@ -78,8 +78,8 @@ class SFTP(SFTPClient):
         Return an adjusted path if we're emulating a "current working
         directory" for the server.
         """
-        path = b(str(path))
         string_path = str(path)
+        path = b(string_path)
         if self._cwd is None:
             return path
         if len(string_path) and string_path[0:1] == b_slash:
